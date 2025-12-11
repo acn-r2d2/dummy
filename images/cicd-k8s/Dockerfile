@@ -18,20 +18,20 @@ apt-get install -y curl tar gzip
 
 cd /tmp
 
-curl -fsSL "https://github.com/zegl/kube-score/releases/download/v${KUBE_SCORE_VERSION}/kube-score_${KUBE_SCORE_VERSION}_linux_amd64.tar.gz" -o kube-score.tar.gz
+curl -fsSL --retry 5 --retry-delay 5 "https://github.com/zegl/kube-score/releases/download/v${KUBE_SCORE_VERSION}/kube-score_${KUBE_SCORE_VERSION}_linux_amd64.tar.gz" -o kube-score.tar.gz
 tar -xzf kube-score.tar.gz
 mv kube-score /usr/local/bin/
 chmod +x /usr/local/bin/kube-score
 rm -rf kube-score*
 
-curl -fsSL "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" -o helm.tar.gz
+curl -fsSL --retry 5 --retry-delay 5 "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" -o helm.tar.gz
 tar -xzf helm.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
 chmod +x /usr/local/bin/helm
 rm -rf helm*
 
 
-curl -fsSL "https://github.com/yannh/kubeconform/releases/download/v${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" -o kubeconform.tar.gz
+curl -fsSL --retry 5 --retry-delay 5 "https://github.com/yannh/kubeconform/releases/download/v${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" -o kubeconform.tar.gz
 tar -xzf kubeconform.tar.gz
 mv kubeconform /usr/local/bin/kubeconform
 chmod +x /usr/local/bin/kubeconform
