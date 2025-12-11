@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Semantic Release
-        uses: cycjimmy/semantic-release-action@v4
+        uses: cycjimmy/semantic-release-action@v6
         id: semantic
         with:
           dry_run: true
@@ -49,5 +49,5 @@ jobs:
         uses: docker/bake-action@v6
         with:
           files: build.hcl
-          targets: all
+          targets: cicd
           push: true
