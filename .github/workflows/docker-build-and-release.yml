@@ -31,7 +31,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run Semantic Release
+      - name: Run Semantic Release Dry Run
         uses: cycjimmy/semantic-release-action@v4
         id: semantic
         with:
@@ -55,6 +55,5 @@ jobs:
 
       - name: Run Semantic Release
         uses: cycjimmy/semantic-release-action@v4
-        id: semantic
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
