@@ -50,5 +50,11 @@ jobs:
         uses: docker/bake-action@v6
         with:
           files: build.hcl
-          targets: cicd
+          targets: all
           push: true
+
+      - name: Run Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
+        id: semantic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
