@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/acn-r2d2/dummy/compare/v1.2.0...v1.3.0) (2025-12-12)
+
+
+### Features
+
+* update node ([880430e](https://github.com/acn-r2d2/dummy/commit/880430eaff239ef64f13e48affe6569c5f691410))
+
 # [1.2.0](https://github.com/acn-r2d2/dummy/compare/v1.1.0...v1.2.0) (2025-12-11)
 
 
