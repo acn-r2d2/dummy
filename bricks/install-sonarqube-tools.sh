@@ -8,3 +8,5 @@ unzip /tmp/sonar.zip -d /tmp/sonar
 mv /tmp/sonar/sonar-scanner* /opt/sonar-scanner
 rm -rf /tmp/sonar*
 ln -s /opt/sonar-scanner/bin/sonar-scanner /usr/local/bin/sonar-scanner
+
+
